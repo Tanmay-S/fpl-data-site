@@ -4,10 +4,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class PageController {
+@RequestMapping("/data")
+public class DataController {
 
     @RequestMapping({"", "/"})
-    public String getIndex() {
-        return "index";
+    public String getIndexPage() {
+        return "data/index";
     }
 }
