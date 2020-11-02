@@ -8,9 +8,9 @@ import java.io.IOException;
 @Service
 public class TableParserServiceImpl implements TableParserService {
 
-    @Override
-    public String getTable(String url) throws IOException {
-        FfsHtmlTableParser ffsHtmlTableParser = new FfsHtmlTableParser(url);
-        return ffsHtmlTableParser.getTable();
-    }
+	@Override
+	public String getTable(String url) throws IOException {
+		FfsHtmlTableParser ffsHtmlTableParser = new FfsHtmlTableParser(url);
+		return ffsHtmlTableParser.getTable();
+	}
 }
