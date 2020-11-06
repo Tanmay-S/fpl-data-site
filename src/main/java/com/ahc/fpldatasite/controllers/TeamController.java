@@ -18,7 +18,7 @@ public class TeamController {
         this.tableParserService = tableParserService;
     }
 
-    @RequestMapping({"", "/"})
+    @RequestMapping({ "", "/" })
     public String getIndexPage() {
         return "team/index";
     }
