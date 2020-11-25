@@ -26,7 +26,7 @@ public class TeamController {
     @RequestMapping("fantasy")
     public String getFantasyStats(Model model) {
         try {
-            String table = tableParserService.getTable(FfsUrls.TEAM_FANTASY.url());
+            String table = tableParserService.getTable(FfsUrls.TEAM_FANTASY.getUrl());
             model.addAttribute("fantasyTable", table);
         } catch (IOException ioException) {
             ioException.printStackTrace();
@@ -37,7 +37,7 @@ public class TeamController {
     @RequestMapping("involvement")
     public String getInvolvementStats(Model model) {
         try {
-            String table = tableParserService.getTable(FfsUrls.TEAM_INVOLVEMENT.url());
+            String table = tableParserService.getTable(FfsUrls.TEAM_INVOLVEMENT.getUrl());
             model.addAttribute("involvementTable", table);
         } catch (IOException ioException) {
             ioException.printStackTrace();
@@ -48,7 +48,7 @@ public class TeamController {
     @RequestMapping("distribution")
     public String getDistributionStats(Model model) {
         try {
-            String table = tableParserService.getTable(FfsUrls.TEAM_DISTRIBUTION.url());
+            String table = tableParserService.getTable(FfsUrls.TEAM_DISTRIBUTION.getUrl());
             model.addAttribute("distributionTable", table);
         } catch (IOException ioException) {
             ioException.printStackTrace();
@@ -59,7 +59,7 @@ public class TeamController {
     @RequestMapping("threat")
     public String getThreatStats(Model model) {
         try {
-            String table = tableParserService.getTable(FfsUrls.TEAM_THREAT.url());
+            String table = tableParserService.getTable(FfsUrls.TEAM_THREAT.getUrl());
             model.addAttribute("threatTable", table);
         } catch (IOException ioException) {
             ioException.printStackTrace();
@@ -70,7 +70,7 @@ public class TeamController {
     @RequestMapping("defending")
     public String getDefendingStats(Model model) {
         try {
-            String table = tableParserService.getTable(FfsUrls.TEAM_DEFENDING.url());
+            String table = tableParserService.getTable(FfsUrls.TEAM_DEFENDING.getUrl());
             model.addAttribute("defendingTable", table);
         } catch (IOException ioException) {
             ioException.printStackTrace();
@@ -81,7 +81,7 @@ public class TeamController {
     @RequestMapping("set-piece")
     public String getSetPieceStats(Model model) {
         try {
-            String table = tableParserService.getTable(FfsUrls.TEAM_SET_PIECE.url());
+            String table = tableParserService.getTable(FfsUrls.TEAM_SET_PIECE.getUrl());
             model.addAttribute("setPieceTable", table);
         } catch (IOException ioException) {
             ioException.printStackTrace();
@@ -92,7 +92,7 @@ public class TeamController {
     @RequestMapping("discipline")
     public String getDisciplineStats(Model model) {
         try {
-            String table = tableParserService.getTable(FfsUrls.TEAM_DISCIPLINE.url());
+            String table = tableParserService.getTable(FfsUrls.TEAM_DISCIPLINE.getUrl());
             model.addAttribute("disciplineTable", table);
         } catch (IOException ioException) {
             ioException.printStackTrace();
@@ -103,7 +103,7 @@ public class TeamController {
     @RequestMapping("expected")
     public String getExpectedStats(Model model) {
         try {
-            String table = tableParserService.getTable(FfsUrls.TEAM_EXPECTED.url());
+            String table = tableParserService.getTable(FfsUrls.TEAM_EXPECTED.getUrl());
             model.addAttribute("expectedTable", table);
         } catch (IOException ioException) {
             ioException.printStackTrace();

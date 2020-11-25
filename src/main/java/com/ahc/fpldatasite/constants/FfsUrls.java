@@ -16,7 +16,7 @@ public enum FfsUrls {
         this.url = url;
     }
 
-    public String url() {
+    public String getUrl() {
         return url;
     }
 }
