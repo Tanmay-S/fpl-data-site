@@ -28,7 +28,7 @@ public class TeamController {
 
     @RequestMapping("fantasy")
     public String getFantasyStats(Model model) {
-        model.addAttribute("fantasy", teamRepository.findAll());
+        model.addAttribute("teams", teamRepository.findAll());
         return "team/fantasy";
     }
 
