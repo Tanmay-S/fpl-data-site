@@ -1,6 +1,7 @@
 package com.ahc.fpldatasite.controllers;
 
 import com.ahc.fpldatasite.constants.FfsUrls;
+import com.ahc.fpldatasite.repositories.TeamRepository;
 import com.ahc.fpldatasite.services.TableParserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,24 +14,21 @@ import java.io.IOException;
 public class TeamController {
 
     private final TableParserService tableParserService;
+    private final TeamRepository teamRepository;
 
-    public TeamController(TableParserService tableParserService) {
+    public TeamController(TableParserService tableParserService, TeamRepository teamRepository) {
         this.tableParserService = tableParserService;
+        this.teamRepository = teamRepository;
     }
 
-    @RequestMapping({ "", "/" })
+    @RequestMapping({"", "/"})
     public String getIndexPage() {
         return "team/index";
     }
 
     @RequestMapping("fantasy")
     public String getFantasyStats(Model model) {
-        try {
-            String table = tableParserService.getTable(FfsUrls.TEAM_FANTASY.getUrl());
-            model.addAttribute("fantasyTable", table);
-        } catch (IOException ioException) {
-            ioException.printStackTrace();
-        }
+        model.addAttribute("fantasy", teamRepository.findAll());
         return "team/fantasy";
     }
 

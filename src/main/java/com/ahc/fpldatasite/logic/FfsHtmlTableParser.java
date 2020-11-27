@@ -26,4 +26,9 @@ public class FfsHtmlTableParser {
         Element tableElement = document.select("table").first();
         return tableElement.outerHtml();
     }
+
+    public Element getTableElement() throws IOException {
+        Document document = setDocument();
+        return document.select("table").first();
+    }
 }
