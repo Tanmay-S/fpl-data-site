@@ -23,20 +23,6 @@ public class Team {
     private Integer yellowCards;
     private Integer redCards;
 
-    public Team(String name, Integer gamesPlayed, Integer goals, Integer assists, Integer fantasyAssists, Integer totalAssists, Integer cleanSheets, Integer goalsConceded, Integer ownGoalsConceded, Integer yellowCards, Integer redCards) {
-        this.name = name;
-        this.gamesPlayed = gamesPlayed;
-        this.goals = goals;
-        this.assists = assists;
-        this.fantasyAssists = fantasyAssists;
-        this.totalAssists = totalAssists;
-        this.cleanSheets = cleanSheets;
-        this.goalsConceded = goalsConceded;
-        this.ownGoalsConceded = ownGoalsConceded;
-        this.yellowCards = yellowCards;
-        this.redCards = redCards;
-    }
-
     public Team() {
 
     }
