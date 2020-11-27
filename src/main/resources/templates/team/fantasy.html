@@ -27,18 +27,18 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each="fantasyData: ${fantasy}">
-        <td th:text="${fantasyData.name}">Club</td>
-        <td th:text="${fantasyData.gamesPlayed}">Games Played</td>
-        <td th:text="${fantasyData.goals}">Goals</td>
-        <td th:text="${fantasyData.assists}">Assists</td>
-        <td th:text="${fantasyData.fantasyAssists}">Fantasy Assists</td>
-        <td th:text="${fantasyData.totalAssists}">Total Assists</td>
-        <td th:text="${fantasyData.cleanSheets}">Clean Sheets</td>
-        <td th:text="${fantasyData.goalsConceded}">Goals Conceded</td>
-        <td th:text="${fantasyData.ownGoalsConceded}">Own Goals</td>
-        <td th:text="${fantasyData.yellowCards}">Yellow Cards</td>
-        <td th:text="${fantasyData.redCards}">Red Cards</td>
+    <tr th:each="teamData: ${teams}">
+        <td th:text="${teamData.name}">Club</td>
+        <td th:text="${teamData.fantasy.gamesPlayed}">Games Played</td>
+        <td th:text="${teamData.fantasy.goals}">Goals</td>
+        <td th:text="${teamData.fantasy.assists}">Assists</td>
+        <td th:text="${teamData.fantasy.fantasyAssists}">Fantasy Assists</td>
+        <td th:text="${teamData.fantasy.totalAssists}">Total Assists</td>
+        <td th:text="${teamData.fantasy.cleanSheets}">Clean Sheets</td>
+        <td th:text="${teamData.fantasy.goalsConceded}">Goals Conceded</td>
+        <td th:text="${teamData.fantasy.ownGoalsConceded}">Own Goals</td>
+        <td th:text="${teamData.fantasy.yellowCards}">Yellow Cards</td>
+        <td th:text="${teamData.fantasy.redCards}">Red Cards</td>
     </tr>
     </tbody>
 </table>
