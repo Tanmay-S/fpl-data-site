@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("mini-league")
 public class MiniLeagueController {
 
-    @RequestMapping({"", "/"})
-    public String getTeamForm() {
-        return "mini-league/index";
-    }
+	@RequestMapping({ "", "/" })
+	public String getTeamForm() {
+		return "mini-league/index";
+	}
 }
