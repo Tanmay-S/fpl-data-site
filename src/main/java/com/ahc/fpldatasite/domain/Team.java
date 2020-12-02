@@ -5,36 +5,83 @@ import javax.persistence.*;
 @Entity
 public class Team {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
 
-    private String name;
+	private String name;
 
-    @OneToOne(cascade = CascadeType.ALL, mappedBy = "team")
-    private Fantasy fantasy;
+	@OneToOne(cascade = CascadeType.ALL, mappedBy = "team")
+	private Fantasy fantasy;
 
-    public Team() {
+	private Integer gamesPlayed;
 
-    }
+	private Integer goals;
 
-    public Long getId() {
-        return id;
-    }
+	private Integer goalsConceded;
 
-    public String getName() {
-        return name;
-    }
+	private Integer cleanSheets;
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public Team() {
+	}
 
-    public Fantasy getFantasy() {
-        return fantasy;
-    }
+	public Team(String name, Integer gamesPlayed, Integer goals, Integer goalsConceded, Integer cleanSheets) {
+		this.name = name;
+		this.gamesPlayed = gamesPlayed;
+		this.goals = goals;
+		this.goalsConceded = goalsConceded;
+		this.cleanSheets = cleanSheets;
+	}
 
-    public void setFantasy(Fantasy fantasy) {
-        this.fantasy = fantasy;
-    }
+	public Long getId() {
+		return id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Fantasy getFantasy() {
+		return fantasy;
+	}
+
+	public void setFantasy(Fantasy fantasy) {
+		this.fantasy = fantasy;
+	}
+
+	public Integer getGamesPlayed() {
+		return gamesPlayed;
+	}
+
+	public void setGamesPlayed(Integer gamesPlayed) {
+		this.gamesPlayed = gamesPlayed;
+	}
+
+	public Integer getGoals() {
+		return goals;
+	}
+
+	public void setGoals(Integer goals) {
+		this.goals = goals;
+	}
+
+	public Integer getGoalsConceded() {
+		return goalsConceded;
+	}
+
+	public void setGoalsConceded(Integer goalsConceded) {
+		this.goalsConceded = goalsConceded;
+	}
+
+	public Integer getCleanSheets() {
+		return cleanSheets;
+	}
+
+	public void setCleanSheets(Integer cleanSheets) {
+		this.cleanSheets = cleanSheets;
+	}
 }
