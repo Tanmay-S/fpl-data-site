@@ -33,4 +33,4 @@ build/
 .vscode/
 
 ### Project Specefic ###
-/src/main/java/com/ahc/fpldatasite/constants/SecurityKeys.java
+/fpl-data/src/main/java/com/ahc/fpldatasite/constants/SecurityKeys.java
